@@ -1,20 +1,17 @@
 import Vue from "vue";
 import App from "./App.vue";
-import Router from "vue-router";
-import Home from "./components/Home";
 
-const app = new Vue({
-  render: h => h(App)
-}).$mount("#app");
+// import VueRouter from "vue-router";
+// import Home from "./components/Home";
 
-app.use(navigation);
+new Vue({ render: h => h(App) }).$mount("#app");
 
-const navigation = new Router({ routes });
+// const Router = new VueRouter({ routes });
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home
-  }
-];
+// const routes = [
+//   {
+//     path: "/",
+//     name: "Home",
+//     component: Home
+//   }
+// ];
