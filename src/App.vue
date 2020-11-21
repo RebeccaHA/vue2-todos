@@ -1,5 +1,7 @@
 <template>
   <div>
+    <NavBar />
+    <router-view></router-view>
     <TodoList :todos="todos" />
     <TodoForm @todo-item="addTodo" />
   </div>
@@ -8,13 +10,15 @@
 <script>
 import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
+import NavBar from "./components/NavBar.vue";
 import { store } from "./store";
 
 export default {
   name: "App",
   components: {
     TodoList,
-    TodoForm
+    TodoForm,
+    NavBar
   },
   data() {
     return {
