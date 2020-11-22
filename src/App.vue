@@ -12,7 +12,6 @@ import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
 import NavBar from "./components/NavBar.vue";
 import { store } from "./store";
-import { mapState } from "vuex";
 
 export default {
   name: "App",
@@ -23,6 +22,10 @@ export default {
   },
   store,
 
-  computed: mapState("store", ["todos"])
+  computed: {
+    todos: function() {
+      return store.state.todos;
+    }
+  }
 };
 </script>
