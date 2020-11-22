@@ -1,7 +1,9 @@
 <template>
-  <nav>
-    <router-link to="/home">Home</router-link>
-  </nav>
+  <div>
+    <nav>
+      <router-link to="/home">Home</router-link>
+    </nav>
+  </div>
 </template>
 
 <script>

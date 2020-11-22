@@ -3,7 +3,7 @@
     <NavBar />
     <router-view></router-view>
     <TodoList :todos="todos" />
-    <TodoForm @todo-item="addTodo" />
+    <TodoForm />
   </div>
 </template>
 
@@ -12,6 +12,7 @@ import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
 import NavBar from "./components/NavBar.vue";
 import { store } from "./store";
+import { mapState } from "vuex";
 
 export default {
   name: "App",
@@ -20,28 +21,8 @@ export default {
     TodoForm,
     NavBar
   },
-  data() {
-    return {
-      todos: []
-    };
-  },
   store,
-  methods: {
-    addTodo(todo) {
-      this.todos.push(todo);
-      console.log("adding", todo);
-    }
-  }
+
+  computed: mapState("store", ["todos"])
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

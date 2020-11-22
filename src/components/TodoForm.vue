@@ -42,7 +42,9 @@ export default {
         description: this.description,
         importance: this.importance
       };
-      this.$emit("todo-item", todo),
+      console.log(this.title);
+
+      this.$store.dispatch("addTodo", todo),
         (this.title = ""),
         (this.description = ""),
         (this.createdDate = ""),
