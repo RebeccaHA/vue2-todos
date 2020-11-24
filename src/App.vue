@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <router-view></router-view>
+    <router-view />
     <TodoList :todos="todos" />
     <TodoForm />
   </div>
