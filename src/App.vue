@@ -21,7 +21,7 @@ export default {
   },
 
   computed: {
-    todos: function() {
+    todos() {
       return this.$store.state.todos;
     }
   }
