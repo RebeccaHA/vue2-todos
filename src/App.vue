@@ -12,7 +12,6 @@ import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
 import NavBar from "./components/NavBar.vue";
 
-
 export default {
   name: "App",
   components: {
@@ -21,10 +20,9 @@ export default {
     NavBar
   },
 
-
   computed: {
     todos: function() {
-      return store.state.todos;
+      return this.$store.state.todos;
     }
   }
 };
